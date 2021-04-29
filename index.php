@@ -33,9 +33,8 @@
     );
 
     foreach ($partite as  $partita) {
-        echo $partita['homeTeam'].' - '.$partita['teamAway'];
-        echo '  ';
-        echo $partita['score_homeTeam']. ' | '.$partita['homeTeam_teamAway'];
+        echo $partita['homeTeam'].' - '.$partita['teamAway'].'  '.
+        $partita['score_homeTeam']. ' | '.$partita['homeTeam_teamAway'];
         echo "<br><br><br>";
     }
 ?>
