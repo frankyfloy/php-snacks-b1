@@ -1,49 +1,45 @@
 <?php
     $partite = array(
         array(
-            'Salernitana' => rand(0, 100),
-            'Napoli' =>rand(0, 100)
+            'homeTeam' => 'Salernitana',
+            'teamAway' =>'Napoli',
+            'score_homeTeam' => rand(0, 100),
+            'homeTeam_teamAway' => rand(0, 100)
         ),
         array(
-            'Brescia' => rand(0, 100),
-            'Livorno' => rand(0, 100)
+            'homeTeam' => 'Brescia',
+            'teamAway' =>'Livorno',
+            'score_homeTeam' => rand(0, 100),
+            'homeTeam_teamAway' => rand(0, 100)
         ),
         array(
-            'Padova' => rand(0, 100),
-            'Milano' => rand(0, 100)
+            'homeTeam' => 'Padova',
+            'teamAway' =>'Milano',
+            'score_homeTeam' => rand(0, 100),
+            'homeTeam_teamAway' => rand(0, 100)
         ),
         array(
-            'Como' => rand(0, 100),
-            'Manfredonia' => rand(0, 100)
+            'homeTeam' => 'Como',
+            'teamAway' =>'Manfredonia',
+            'score_homeTeam' => rand(0, 100),
+            'homeTeam_teamAway' => rand(0, 100)
         ),
         array(
-            'Palermo' => rand(0, 100),
-            'Bari' =>  rand(0, 100)
+            'homeTeam' => 'Palermo',
+            'teamAway' =>'Bari',
+            'score_homeTeam' => rand(0, 100),
+            'homeTeam_teamAway' => rand(0, 100)
         )
     );
 
     foreach ($partite as  $partita) {
-        $dash = 0;
-        foreach ($partita as $squadra => $punti) {
-            echo $squadra;
-
-            if ($dash == 0) {
-                echo ' - ';
-                $dash++;
-            }else {
-                echo ' | ';
-                $dash = 0;
-            }
-        }
-        foreach ($partita as $squadra => $punti) {
-            echo $punti;
-            if ($dash == 0) {
-                echo ' - ';
-                $dash++;
-            }else {
-                $dash = 0;
-            }
-        }
+        echo $partita['homeTeam'];
+        echo ' - ';
+        echo $partita['teamAway'];
+        echo '  ';
+        echo $partita['score_homeTeam'];
+        echo ' | ';
+        echo $partita['homeTeam_teamAway'];
         echo "<br><br><br>";
     }
 ?>
